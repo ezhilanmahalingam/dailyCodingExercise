@@ -1,0 +1,35 @@
+Given a sorted list of integers, square the elements and give the output in sorted order.
+
+For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].
+
+	/**
+	 * idea is to have two pointers in the input arrays, Compare the squares and insert into new array
+	 * 
+	 * Time Complexity: O(n)
+	 * Space Complexity: O(n)
+	 * n is number of elements in input array
+	 * 
+	 * @param a
+	 */
+	private static int[] squareAndReverse(int a[]) {
+
+		int s = 0, e = a.length - 1;
+		int sq_s = 0, sq_e = 0, i = a.length - 1;
+		int r[] = new int[a.length];
+
+		while (s <= e) {
+
+			sq_s = a[s] * a[s];
+			sq_e = a[e] * a[e];
+
+			if (sq_s > sq_e) {
+				r[i] = sq_s;
+				s++;
+			} else {
+				r[i] = sq_e;
+				e--;
+			}
+			i--;
+		}
+		return r;
+	}
