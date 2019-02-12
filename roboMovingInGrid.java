@@ -1,13 +1,14 @@
    
-int m[][] = { { 0, 0, 1 },
+/**
+                        int m[][] = { { 0, 0, 1 },
 				      { 0, 0, 1 },
 				      { 1, 0, 0 } };
-   /**
+   
 	 * Function is to count the number of path from top left corner to bottom
 	 * right corner with obstacles, here the obstacle is 1.
    
-     Time Complexity: O(m*n) m is no of rows and n is number of cols 
-     Space Complexity: O(m*n)
+         *Time Complexity: O(m*n) m is no of rows and n is number of cols 
+         *Space Complexity: O(m*n)
 	 * 
 	 * @param m
 	 * @param cache
